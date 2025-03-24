@@ -1,0 +1,37 @@
+/**
+ * main
+ */
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --color-purple-100: hsl(254, 88%, 90%);
+    --color-purple-500: hsl(256, 67%, 59%);
+    --color-yellow-100: hsl(31, 66%, 93%);
+    --color-yellow-500: hsl(39, 100%, 71%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-black: hsl(0, 0%, 7%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    font: 1.8rem/1.11 'DM Sans';
+    letter-spacing: normal;
+    color: var(--color-black);
+}
+
+body > header,
+body > footer {
+    flex: 0 0 auto;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 3.2rem 1.6rem;
+}
