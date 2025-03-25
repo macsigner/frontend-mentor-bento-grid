@@ -14,6 +14,11 @@ html {
     --color-yellow-500: hsl(39, 100%, 71%);
     --color-white: hsl(0, 0%, 100%);
     --color-black: hsl(0, 0%, 7%);
+
+    --font-size-100: 1.8rem;
+    --font-size-110: 2.6rem;
+    --font-size-120: 3.2rem;
+    --font-size-130: 4.6rem;
 }
 
 body {
@@ -22,7 +27,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100svh;
-    font: 1.8rem/1.11 'DM Sans';
+    font: var(--font-size-100) /1.11 'DM Sans';
     letter-spacing: normal;
     color: var(--color-black);
     background-color: #F6F5F6;
@@ -40,7 +45,7 @@ main {
 
 h1,
 .h1 {
-    font-size: 4.6rem;
+    font-size: var(--font-size-130);
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -50,7 +55,7 @@ h1,
 
 h2,
 .h2 {
-    font-size: 3.2rem;
+    font-size: var(--font-size-120);
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -59,7 +64,7 @@ h2,
 }
 h3,
 .h3 {
-    font-size: 2.6rem;
+    font-size: var(--font-size-110);
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -69,7 +74,7 @@ h3,
 
 h4,
 .h4 {
-    font-size: 1.8rem;
+    font-size: var(--font-size-100);
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
