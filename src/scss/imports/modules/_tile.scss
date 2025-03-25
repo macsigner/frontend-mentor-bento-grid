@@ -4,16 +4,144 @@
 @use 'sass:math';
 
 .tile {
+    --tile-highlight-color: inherit;
+
+    overflow: hidden;
     padding: 1.6rem;
     border-radius: 1rem;
     background-color: var(--color-white);
 
+    & > :first-child {
+        margin-top: 0;
+    }
+
+    & > :last-child {
+        margin-bottom: 0;
+    }
+
+    &--centered {
+        text-align: center;
+    }
+
+    &--star {
+        --tile-highlight-color: var(--color-yellow-500);
+        padding: 4rem 3.2rem;
+        color: var(--color-white);
+        background-color: var(--color-purple-500);
+    }
+
+    &--schedule {
+        background-color: var(--color-yellow-500);
+    }
+
+    &--social-media {
+        padding: 3.2rem 1.75rem;
+        background-color: var(--color-purple-100);
+    }
+
+    &--grow-followers {
+        padding: 2.4rem;
+        color: var(--color-white);
+        background-color: var(--color-purple-500);
+    }
+
+    &--audience-growth {
+        padding: 2.4rem;
+    }
+
+    &--schedule-quick {
+        padding: 3.2rem;
+        background-color: var(--color-yellow-100);
+    }
+
+    &--use-ai {
+        padding: 2.4rem;
+        background-color: var(--color-yellow-500);
+    }
+
     &__title {
-        font-size: 2.6rem;
+        margin-bottom: 1.6rem;
+    }
+
+    &--star &__title {
+        margin-bottom: 2.4rem;
+    }
+
+    &--social-media &__title {
+        margin-bottom: 2.4rem;
+    }
+
+    &--grow-followers &__title {
+        margin-top: 4rem;
+    }
+
+    &--audience-growth &__title {
+        margin-bottom: 2.4rem;
+    }
+
+    &--audience-growth &__title strong {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        font-size: 4.6rem;
         font-weight: 500;
         font-stretch: normal;
         font-style: normal;
-        line-height: 0.92;
-        letter-spacing: math.div(-1.56em, 26);
+        line-height: 0.91;
+        letter-spacing: normal;
+    }
+
+    &--audience-growth &__title span {
+        vertical-align: top;
+        line-height: .7;
+        position: relative;
+        top: -.1em;
+    }
+
+    &--schedule-quick &__title em {
+        font-style: italic;
+        color: var(--color-purple-500);
+    }
+
+    &__highlight {
+        color: var(--tile-highlight-color);
+    }
+
+    &--star &__highlight {
+        font-weight: 500;
+    }
+
+    &__img {
+        margin-bottom: 1.6rem
+    }
+
+    &--star &__img {
+        margin-bottom: .8rem;
+        width: 19.2rem;
+    }
+
+    &--schedule &__img {
+        width: 20.8rem;
+        margin-bottom: -3.6rem;
+    }
+
+    &--social-media &__img {
+        margin-bottom: 2.4rem;
+    }
+
+    &--grow-followers &__img {
+        width: 22.8rem;
+    }
+
+    &--audience-growth &__img {
+        width: 17.9rem;
+    }
+
+    &--schedule-quick &__img {
+        width: 19.05rem;
+    }
+
+    &--use-ai &__img {
+        width: 22rem;
     }
 }

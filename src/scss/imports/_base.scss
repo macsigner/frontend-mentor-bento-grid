@@ -1,6 +1,7 @@
 /**
- * main
+ * base
  */
+@use 'sass:math';
 
 html {
     font-size: 62.5%;
@@ -24,7 +25,7 @@ body {
     font: 1.8rem/1.11 'DM Sans';
     letter-spacing: normal;
     color: var(--color-black);
-    background-color: #f6f5f6;
+    background-color: #F6F5F6;
 }
 
 body > header,
@@ -35,4 +36,34 @@ body > footer {
 main {
     flex: 1 0 auto;
     padding: 3.2rem 1.6rem;
+}
+
+h1,
+.h1 {
+    font-size: 4.6rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.91;
+    letter-spacing: math.div(-1.84em, 46);
+}
+
+h2,
+.h2 {
+    font-size: 2.6rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.92;
+    letter-spacing: math.div(-1.56em, 26);
+}
+
+h3,
+.h3 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.11;
+    letter-spacing: normal;
 }
