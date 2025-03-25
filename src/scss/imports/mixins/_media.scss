@@ -1,0 +1,10 @@
+/**
+ * media
+ */
+@use 'sass:math';
+
+@mixin tablet {
+    @media (min-width: #{math.div(60em, 1.6)}) {
+        @content;
+    }
+}

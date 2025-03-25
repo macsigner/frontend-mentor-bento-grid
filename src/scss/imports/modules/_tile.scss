@@ -2,6 +2,7 @@
  * tile bem module
  */
 @use 'sass:math';
+@use '../mixins/media';
 
 .tile {
     --tile-highlight-color: inherit;
@@ -10,6 +11,12 @@
     padding: 1.6rem;
     border-radius: 1rem;
     background-color: var(--color-white);
+
+    @include media.tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
     & > :first-child {
         margin-top: 0;
@@ -28,6 +35,11 @@
         padding: 4rem 3.2rem;
         color: var(--color-white);
         background-color: var(--color-purple-500);
+
+        @include media.tablet {
+            grid-column: 1 / -1;
+            aspect-ratio: 688 / 324;
+        }
     }
 
     &--schedule {
@@ -37,16 +49,33 @@
     &--social-media {
         padding: 3.2rem 1.75rem;
         background-color: var(--color-purple-100);
+
+        @include media.tablet {
+            grid-column: 1 / -1;
+        }
     }
 
     &--grow-followers {
         padding: 2.4rem;
         color: var(--color-white);
         background-color: var(--color-purple-500);
+
+        @include media.tablet {
+            display: block;
+            grid-column: 1 / -1;
+            text-align: left;
+        }
     }
 
     &--audience-growth {
         padding: 2.4rem;
+
+        @include media.tablet {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            grid-column: 1 / -1;
+        }
     }
 
     &--schedule-quick {
@@ -65,6 +94,12 @@
         margin-left: auto;
     }
 
+    &--grow-followers figure {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
     &__title {
         margin-bottom: 1.6rem;
     }
@@ -81,6 +116,11 @@
         width: 25.7rem;
         margin-right: auto;
         margin-left: auto;
+
+        @include media.tablet {
+            margin-right: 0;
+            margin-left: 0;
+        }
     }
 
     &--audience-growth &__title {
@@ -130,6 +170,7 @@
     &--star &__img {
         margin-bottom: .8rem;
         width: 19.2rem;
+        align-self: center;
     }
 
     &--schedule &__img {
@@ -139,11 +180,19 @@
 
     &--social-media &__img {
         margin-bottom: 2.4rem;
+
+        @include media.tablet {
+            width: 35.73rem;
+        }
     }
 
     &--grow-followers &__img {
         width: 22.8rem;
         margin-bottom: 4rem;
+
+        @include media.tablet {
+            margin-bottom: 0;
+        }
     }
 
     &--audience-growth &__img {

@@ -1,8 +1,13 @@
 /**
  * grid bem module
  */
+@use '../mixins/media';
 
 .grid {
     display: grid;
     grid-gap: 3.2rem;
+
+    @include media.tablet {
+        grid-template-columns: repeat(2, minmax(10px, 1fr));
+    }
 }
