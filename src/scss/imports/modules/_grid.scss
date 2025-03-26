@@ -10,4 +10,10 @@
     @include media.tablet {
         grid-template-columns: repeat(2, minmax(10px, 1fr));
     }
+
+    @include media.desktop {
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(4, minmax(10px, 1fr));
+        grid-template-rows: 32.4rem 5.9rem 15.6rem 24.6rem;
+    }
 }

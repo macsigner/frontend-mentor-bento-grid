@@ -37,13 +37,30 @@
         background-color: var(--color-purple-500);
 
         @include media.tablet {
-            grid-column: 1 / -1;
+            grid-column: span 2;
             aspect-ratio: 688 / 324;
+        }
+
+        @include media.desktop {
+            aspect-ratio: auto;
+            order: -9;
+        }
+    }
+
+    &--manage-accounts {
+        @include media.desktop {
+            grid-row: span 2;
+            order: -7;
         }
     }
 
     &--schedule {
         background-color: var(--color-yellow-500);
+
+        @include media.desktop {
+            grid-row: span 2;
+            order: -6;
+        }
     }
 
     &--social-media {
@@ -51,7 +68,14 @@
         background-color: var(--color-purple-100);
 
         @include media.tablet {
-            grid-column: 1 / -1;
+            grid-column: span 2;
+        }
+
+        @include media.desktop {
+            grid-column: span 1;
+            grid-row: span 3;
+            order: -8;
+            text-align: left;
         }
     }
 
@@ -62,8 +86,12 @@
 
         @include media.tablet {
             display: block;
-            grid-column: 1 / -1;
+            grid-column: span 2;
             text-align: left;
+        }
+
+        @include media.desktop {
+            order: 10;
         }
     }
 
@@ -74,22 +102,42 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            grid-column: 1 / -1;
+            flex-wrap: wrap;
+            grid-column: span 2;
+        }
+
+        @include media.tablet {
+            grid-column: span 1;
         }
     }
 
     &--schedule-quick {
         padding: 3.2rem;
         background-color: var(--color-yellow-100);
+
+        @include media.desktop {
+            grid-row: span 2;
+            order: -10;
+        }
     }
 
     &--use-ai {
         padding: 2.4rem;
         background-color: var(--color-yellow-500);
+
+        @include media.tablet {
+            grid-column: span 2;
+        }
+
+        @include media.desktop {
+            grid-column: span 1;
+            grid-row: span 2;
+            order: -5;
+        }
     }
 
     &--social-media figcaption {
-        width: 27.9rem;
+        max-width: 27.9rem;
         margin-right: auto;
         margin-left: auto;
     }
@@ -183,6 +231,10 @@
 
         @include media.tablet {
             width: 35.73rem;
+        }
+
+        @include media.desktop {
+            max-width: none;
         }
     }
 

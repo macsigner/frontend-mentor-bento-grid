@@ -8,3 +8,9 @@
         @content;
     }
 }
+
+@mixin desktop {
+    @media (min-width: #{math.div(100em, 1.6)}) {
+        @content;
+    }
+}
